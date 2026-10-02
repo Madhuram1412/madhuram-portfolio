@@ -59,12 +59,12 @@ export default function Navbar({ onOpenResumeModal }) {
             className="flex items-center gap-3 group focus:outline-none"
             aria-label="Madhuram Donawat Portfolio Home"
           >
-            <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-brand-cyan via-brand-indigo to-brand-fuchsia p-[1.5px] transition-transform duration-300 group-hover:scale-110 shadow-glow-cyan">
-              <div className="w-full h-full bg-dark-950 rounded-[10px] flex items-center justify-center">
-                <span className="font-mono font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-fuchsia text-lg">
-                  MD
-                </span>
-              </div>
+            <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-brand-cyan via-brand-indigo to-brand-fuchsia p-[1.5px] transition-transform duration-300 group-hover:scale-110 shadow-glow-cyan overflow-hidden shrink-0">
+              <img 
+                src="./profile.jpg" 
+                alt="Madhuram Donawat" 
+                className="w-full h-full object-cover rounded-full bg-dark-950" 
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-white text-base sm:text-lg tracking-tight group-hover:text-cyan-300 transition-colors">

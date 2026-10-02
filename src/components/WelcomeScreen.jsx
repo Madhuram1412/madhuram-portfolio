@@ -109,14 +109,15 @@ export default function WelcomeScreen({ onComplete }) {
           {/* Pulsing ambient aura */}
           <div className="absolute w-28 h-28 rounded-full bg-gradient-to-tr from-cyan-500/30 via-indigo-500/30 to-fuchsia-500/30 blur-xl animate-pulse" />
           
-          {/* Futuristic Center Monogram */}
-          <div className="w-20 h-20 rounded-2xl bg-dark-900/95 border-2 border-cyan-400/50 flex items-center justify-center shadow-2xl shadow-cyan-500/30 relative z-10 backdrop-blur-2xl">
-            <span className="text-3xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-indigo-200 to-fuchsia-300 font-mono">
-              MD
-            </span>
-            
+          {/* Futuristic Center Photo Avatar */}
+          <div className="w-24 h-24 rounded-full bg-dark-900/95 border-2 border-cyan-400/80 p-1 flex items-center justify-center shadow-2xl shadow-cyan-500/40 relative z-10 backdrop-blur-2xl">
+            <img 
+              src="./profile.jpg" 
+              alt="Madhuram Donawat" 
+              className="w-full h-full object-cover rounded-full"
+            />
             {/* Live Indicator Beacon */}
-            <span className="absolute -top-1.5 -right-1.5 flex h-3.5 w-3.5">
+            <span className="absolute bottom-0 right-1 flex h-3.5 w-3.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-cyan-400 border-2 border-dark-950" />
             </span>

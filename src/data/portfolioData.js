@@ -23,6 +23,7 @@ export const personalInfo = {
     github: "https://github.com/Madhuram1412",
     resumePdf: "./Madhuram_Donawat_Resume.pdf"
   },
+  avatar: "./profile.jpg",
   status: "Open to Software Developer Roles & Opportunities"
 };
 

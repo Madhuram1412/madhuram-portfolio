@@ -66,13 +66,29 @@ export default function Hero({ onOpenResumeModal }) {
         {/* Left Column: Text & CTAs */}
         <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
           
-          {/* Status Badge with Neon Ripple */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-dark-900/90 border border-brand-cyan/50 text-xs font-mono text-cyan-300 shadow-lg shadow-cyan-500/20 backdrop-blur-md">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-80" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400 shadow-glow-cyan" />
-            </span>
-            <span className="font-semibold">{personalInfo.status}</span>
+          {/* Profile Photo Avatar & Status Badge */}
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="relative group shrink-0">
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-fuchsia rounded-full blur-md opacity-75 group-hover:opacity-100 transition duration-300 animate-pulse-glow" />
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-brand-cyan/80 p-0.5 bg-dark-950 shadow-2xl">
+                <img 
+                  src="./profile.jpg" 
+                  alt="Madhuram Donawat" 
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <span className="absolute bottom-0 right-0 p-1 rounded-full bg-emerald-500 border-2 border-dark-950 shadow-lg" title="Open to Roles">
+                <span className="block w-2 h-2 rounded-full bg-white animate-ping" />
+              </span>
+            </div>
+
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-dark-900/90 border border-brand-cyan/50 text-xs font-mono text-cyan-300 shadow-lg shadow-cyan-500/20 backdrop-blur-md">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-80" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400 shadow-glow-cyan" />
+              </span>
+              <span className="font-semibold">{personalInfo.status}</span>
+            </div>
           </div>
 
           {/* Main Title & Rotating Role */}
