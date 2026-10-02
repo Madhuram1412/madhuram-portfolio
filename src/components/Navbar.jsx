@@ -48,7 +48,7 @@ export default function Navbar({ onOpenResumeModal }) {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-dark-950/85 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50 py-3' 
+        ? 'bg-dark-950/95 border-b border-white/10 shadow-2xl shadow-black/70 py-3' 
         : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,7 +77,7 @@ export default function Navbar({ onOpenResumeModal }) {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1.5 bg-dark-900/80 p-1.5 rounded-full border border-white/10 backdrop-blur-xl shadow-lg">
+          <nav className="hidden lg:flex items-center gap-1.5 bg-dark-900/95 p-1.5 rounded-full border border-white/10 shadow-lg">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -144,7 +144,7 @@ export default function Navbar({ onOpenResumeModal }) {
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="sm:hidden bg-dark-950/95 backdrop-blur-2xl border-b border-white/10 px-4 pt-4 pb-7 space-y-3 animate-card-enter">
+        <div className="sm:hidden bg-dark-950/98 border-b border-white/10 px-4 pt-4 pb-7 space-y-3 animate-card-enter shadow-2xl">
           <div className="flex flex-col space-y-1.5">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);

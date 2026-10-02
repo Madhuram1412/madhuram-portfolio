@@ -21,7 +21,7 @@ export default function WelcomeScreen({ onComplete }) {
     setIsExiting(true);
     setTimeout(() => {
       if (onComplete) onComplete();
-    }, 650);
+    }, 280);
   };
 
   // Smoothly increment progress and auto-open website
@@ -71,14 +71,22 @@ export default function WelcomeScreen({ onComplete }) {
 
   return (
     <div 
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#030712] select-none transition-all duration-700 ease-out overflow-hidden ${
-        isExiting ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#030712] select-none transition-opacity duration-300 ease-out overflow-hidden ${
+        isExiting ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'
       }`}
       style={{ backgroundColor: '#030712' }}
+      onTouchMove={(e) => e.preventDefault()}
+      onWheel={(e) => e.preventDefault()}
     >
       {/* Background Animated Neon Mesh & Glows */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-brand-cyan/25 via-brand-indigo/15 to-transparent rounded-full blur-[130px] pointer-events-none animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-brand-fuchsia/25 via-brand-purple/15 to-transparent rounded-full blur-[140px] pointer-events-none animate-float-slow" />
+      <div 
+        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none animate-pulse-glow"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.2) 0%, rgba(99,102,241,0.1) 45%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full pointer-events-none animate-float-slow"
+        style={{ background: 'radial-gradient(circle, rgba(217,70,239,0.18) 0%, transparent 70%)' }}
+      />
       <div className="absolute inset-0 tech-grid-bg opacity-30 pointer-events-none" />
 
       {/* Top Header Controls */}
@@ -107,10 +115,13 @@ export default function WelcomeScreen({ onComplete }) {
           <div className="absolute w-32 h-32 rounded-full border-2 border-brand-cyan/30 border-dashed animate-spin-slow pointer-events-none" />
           
           {/* Pulsing ambient aura */}
-          <div className="absolute w-28 h-28 rounded-full bg-gradient-to-tr from-cyan-500/30 via-indigo-500/30 to-fuchsia-500/30 blur-xl animate-pulse" />
+          <div 
+            className="absolute w-28 h-28 rounded-full pointer-events-none animate-pulse"
+            style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.4) 0%, rgba(217,70,239,0.25) 50%, transparent 70%)' }}
+          />
           
           {/* Futuristic Center Photo Avatar */}
-          <div className="w-24 h-24 rounded-full bg-dark-900/95 border-2 border-cyan-400/80 p-1 flex items-center justify-center shadow-2xl shadow-cyan-500/40 relative z-10 backdrop-blur-2xl">
+          <div className="w-24 h-24 rounded-full bg-dark-900/98 border-2 border-cyan-400/80 p-1 flex items-center justify-center shadow-2xl shadow-cyan-500/40 relative z-10">
             <img 
               src="./profile.jpg" 
               alt="Madhuram Donawat" 
@@ -141,7 +152,7 @@ export default function WelcomeScreen({ onComplete }) {
         </div>
 
         {/* Developer Loading Telemetry Box */}
-        <div className="w-full bg-dark-900/95 border border-white/10 rounded-2xl p-5 shadow-2xl backdrop-blur-2xl mb-6 text-left relative overflow-hidden">
+        <div className="w-full bg-dark-900/98 border border-white/10 rounded-2xl p-5 shadow-2xl mb-6 text-left relative overflow-hidden">
           
           {/* Top subtle glow edge */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-cyan via-brand-indigo to-brand-fuchsia" />

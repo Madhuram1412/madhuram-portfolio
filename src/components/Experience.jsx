@@ -16,7 +16,10 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24 relative overflow-hidden">
       {/* Background Accent */}
-      <div className="absolute top-1/2 right-1/4 w-80 h-80 bg-brand-cyan/5 rounded-full blur-3xl pointer-events-none" />
+      <div 
+        className="absolute top-1/2 right-1/4 w-80 h-80 rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.06) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         

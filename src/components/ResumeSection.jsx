@@ -16,7 +16,10 @@ export default function ResumeSection({ onOpenResumeModal }) {
   return (
     <section id="resume" className="py-24 relative overflow-hidden">
       {/* Background Accent Gradients */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-brand-cyan/15 via-brand-indigo/15 to-brand-fuchsia/10 rounded-full blur-3xl pointer-events-none" />
+      <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.1) 0%, rgba(99,102,241,0.08) 45%, transparent 70%)' }}
+      />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         

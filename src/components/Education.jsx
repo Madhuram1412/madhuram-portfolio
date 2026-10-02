@@ -14,7 +14,10 @@ export default function Education() {
   return (
     <section id="education" className="py-24 relative overflow-hidden bg-dark-900/50">
       {/* Background Subtle Accent */}
-      <div className="absolute bottom-10 right-0 w-96 h-96 bg-gradient-to-tl from-brand-indigo/20 via-brand-purple/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div 
+        className="absolute bottom-10 right-0 w-96 h-96 rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         

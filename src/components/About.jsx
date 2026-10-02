@@ -64,8 +64,14 @@ export default function About() {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       {/* Background Subtle Accent */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-gradient-to-r from-brand-cyan/15 via-brand-indigo/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-80 h-80 bg-gradient-to-l from-brand-fuchsia/15 via-brand-purple/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div 
+        className="absolute top-1/2 left-0 w-80 h-80 rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.1) 0%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-10 right-0 w-80 h-80 rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(217,70,239,0.1) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

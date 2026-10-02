@@ -20,8 +20,14 @@ export default function Projects({ onSelectProject }) {
   return (
     <section id="projects" className="py-24 relative overflow-hidden bg-dark-900/40">
       {/* Background Accent Gradients */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-brand-cyan/15 via-brand-indigo/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-gradient-to-bl from-brand-fuchsia/15 via-brand-purple/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div 
+        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.12) 0%, rgba(99,102,241,0.08) 50%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-10 right-10 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(217,70,239,0.12) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         

@@ -20,6 +20,19 @@ export default function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // Lock body scroll while welcome screen is active to prevent scroll-blur & ghosting
+  React.useEffect(() => {
+    if (showWelcome) {
+      document.body.style.overflow = 'hidden';
+      window.scrollTo(0, 0);
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [showWelcome]);
+
   return (
     <div className="relative min-h-screen bg-dark-950 text-slate-100 selection:bg-brand-cyan/20 selection:text-brand-cyan">
       {/* Welcome Screen Animation (Plays on page load, then smoothly unveils the website) */}

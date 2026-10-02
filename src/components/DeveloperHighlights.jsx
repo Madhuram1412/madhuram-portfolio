@@ -28,7 +28,10 @@ export default function DeveloperHighlights() {
   return (
     <section className="py-24 relative overflow-hidden bg-dark-900/40">
       {/* Background Lighting */}
-      <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-brand-cyan/15 via-brand-indigo/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div 
+        className="absolute top-1/2 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.1) 0%, rgba(99,102,241,0.06) 50%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         

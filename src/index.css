@@ -35,11 +35,9 @@
 }
 
 @layer utilities {
-  /* Enhanced Glassmorphism */
+  /* Enhanced Glassmorphism (High-clarity, zero blur-lag on scroll) */
   .glass-card {
-    background: rgba(11, 19, 38, 0.72);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(11, 19, 38, 0.88);
     border: 1px solid rgba(255, 255, 255, 0.09);
     box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
   }
@@ -55,9 +53,7 @@
   }
 
   .glass-nav {
-    background: rgba(5, 10, 22, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(5, 10, 22, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 

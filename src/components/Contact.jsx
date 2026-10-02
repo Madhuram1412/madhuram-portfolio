@@ -51,7 +51,10 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 relative overflow-hidden bg-dark-900/40">
       {/* Background Accent */}
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-brand-cyan/15 via-brand-fuchsia/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div 
+        className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.1) 0%, rgba(217,70,239,0.08) 50%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         

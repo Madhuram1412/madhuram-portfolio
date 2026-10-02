@@ -122,8 +122,14 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 relative overflow-hidden">
       {/* Background Animated Atmosphere Glows */}
-      <div className="absolute top-1/4 -right-16 w-96 h-96 bg-brand-cyan/15 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
-      <div className="absolute bottom-1/4 -left-16 w-96 h-96 bg-brand-fuchsia/15 rounded-full blur-3xl pointer-events-none animate-float-slow" />
+      <div 
+        className="absolute top-1/4 -right-16 w-96 h-96 rounded-full pointer-events-none animate-pulse-glow"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.12) 0%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-1/4 -left-16 w-96 h-96 rounded-full pointer-events-none animate-float-slow"
+        style={{ background: 'radial-gradient(circle, rgba(217,70,239,0.12) 0%, transparent 70%)' }}
+      />
       <div className="absolute inset-0 tech-grid-bg opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -145,7 +151,7 @@ export default function Skills() {
         </div>
 
         {/* Animated Infinite Streaming Tech Marquee */}
-        <div className="w-full overflow-hidden py-3 mb-10 border-y border-white/10 bg-dark-900/60 backdrop-blur-md relative rounded-xl">
+        <div className="w-full overflow-hidden py-3 mb-10 border-y border-white/10 bg-dark-900/90 relative rounded-xl shadow-lg">
           <div className="flex whitespace-nowrap animate-gradient-x w-max space-x-8 text-xs font-mono">
             {skillsData.concat(skillsData).map((skill, index) => {
               const config = categoryBadgeConfig[skill.category] || categoryBadgeConfig.languages;
@@ -171,7 +177,7 @@ export default function Skills() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
           
           {/* Animated Category Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-dark-900/90 rounded-2xl border border-white/10 backdrop-blur-xl shadow-xl">
+          <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-dark-900/95 rounded-2xl border border-white/10 shadow-xl">
             {skillCategories.map((cat) => {
               const isActive = activeCategory === cat.id;
               const count = cat.id === 'all' 
@@ -246,7 +252,10 @@ export default function Skills() {
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${config.accentGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
                 {/* Subtle Radial Backlight on Hover */}
-                <div className="absolute -top-12 -right-12 w-28 h-28 bg-white/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all duration-500 pointer-events-none" />
+                <div 
+                  className="absolute -top-12 -right-12 w-28 h-28 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.2) 0%, transparent 70%)' }}
+                />
 
                 <div>
                   {/* Top Bar: Icon + Category Badge */}

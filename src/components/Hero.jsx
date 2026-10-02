@@ -57,9 +57,18 @@ export default function Hero({ onOpenResumeModal }) {
       className="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       {/* Dynamic Animated Ambient Orbs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 sm:w-[650px] sm:h-[650px] bg-gradient-to-tr from-brand-cyan/20 via-brand-indigo/20 to-brand-fuchsia/15 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-glow" />
-      <div className="absolute -top-10 left-10 w-80 h-80 bg-brand-cyan/15 rounded-full blur-3xl pointer-events-none -z-10 animate-float-slow" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-brand-fuchsia/15 rounded-full blur-3xl pointer-events-none -z-10 animate-float-medium" />
+      <div 
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 sm:w-[650px] sm:h-[650px] rounded-full pointer-events-none -z-10 animate-pulse-glow"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.14) 0%, rgba(99,102,241,0.09) 45%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute -top-10 left-10 w-80 h-80 rounded-full pointer-events-none -z-10 animate-float-slow"
+        style={{ background: 'radial-gradient(circle, rgba(0,240,255,0.12) 0%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-10 right-10 w-96 h-96 rounded-full pointer-events-none -z-10 animate-float-medium"
+        style={{ background: 'radial-gradient(circle, rgba(217,70,239,0.12) 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
@@ -82,7 +91,7 @@ export default function Hero({ onOpenResumeModal }) {
               </span>
             </div>
 
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-dark-900/90 border border-brand-cyan/50 text-xs font-mono text-cyan-300 shadow-lg shadow-cyan-500/20 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-dark-900/95 border border-brand-cyan/50 text-xs font-mono text-cyan-300 shadow-lg shadow-cyan-500/20">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-80" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400 shadow-glow-cyan" />
@@ -116,7 +125,7 @@ export default function Hero({ onOpenResumeModal }) {
           </div>
 
           {/* Short Professional Resume Introduction */}
-          <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl bg-dark-900/60 p-4 sm:p-5 rounded-2xl border border-white/10 backdrop-blur-md shadow-xl">
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl bg-dark-900/90 p-4 sm:p-5 rounded-2xl border border-white/10 shadow-xl">
             {personalInfo.summary}
           </p>
 
@@ -132,7 +141,7 @@ export default function Hero({ onOpenResumeModal }) {
 
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-slate-200 bg-dark-900/90 hover:bg-slate-800/90 border border-slate-700/80 hover:border-cyan-400/50 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] backdrop-blur-md shadow-lg"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-slate-200 bg-dark-900/90 hover:bg-slate-800/90 border border-slate-700/80 hover:border-cyan-400/50 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg"
             >
               <span>Contact Me</span>
               <Mail className="w-4 h-4 text-cyan-400" />
@@ -250,12 +259,12 @@ export default function Hero({ onOpenResumeModal }) {
             </div>
 
             {/* Floating Quick Badges around Terminal */}
-            <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-xl bg-dark-900/95 border border-brand-cyan/50 shadow-xl shadow-cyan-500/25 backdrop-blur-md flex items-center gap-1.5 animate-float-slow">
+            <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-xl bg-dark-900/95 border border-brand-cyan/50 shadow-xl shadow-cyan-500/25 flex items-center gap-1.5 animate-float-slow">
               <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-spin-slow" />
               <span className="text-xs font-bold text-slate-100">Generative AI</span>
             </div>
 
-            <div className="absolute -bottom-3 -left-2 px-3 py-1.5 rounded-xl bg-dark-900/95 border border-brand-fuchsia/50 shadow-xl shadow-fuchsia-500/25 backdrop-blur-md flex items-center gap-1.5 animate-float-medium">
+            <div className="absolute -bottom-3 -left-2 px-3 py-1.5 rounded-xl bg-dark-900/95 border border-brand-fuchsia/50 shadow-xl shadow-fuchsia-500/25 flex items-center gap-1.5 animate-float-medium">
               <Brain className="w-3.5 h-3.5 text-fuchsia-400" />
               <span className="text-xs font-bold text-slate-100">Agentic AI & RAG</span>
             </div>
